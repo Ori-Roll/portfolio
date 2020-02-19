@@ -1,38 +1,58 @@
-.App {
-  text-align: center;
+:root {
+	--header-btn-shadow: rgba(0, 0, 0, 0.055) 5px 8px 15px, rgba(255, 255, 255, 0.692) -4px -4px 10px,
+		inset rgba(255, 255, 255, 0.822) -2px -2px 15px, inset rgba(255, 255, 255, 0.815) 2px 2px 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.main {
+	display: inline-block;
+	margin: 20px auto;
+	width: 100%;
+	text-align: center;
+	height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.portfolio-page {
+	display: inline-block;
+	padding: 0 50px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	padding: 10px 0 10px 0;
+	background: linear-gradient(
+		180deg,
+		rgb(240, 240, 240) 0%,
+		rgb(241, 241, 241) 20%,
+		rgba(255, 255, 255, 1) 100%
+	);
 }
 
-.App-link {
-  color: #61dafb;
+.header * {
+	text-decoration: none;
+	text-align: center;
+	outline: 0;
+	padding: 8px 15px;
+	min-width: 60px;
+	border-radius: 10px;
+	color: rgb(105, 105, 105);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header :hover {
+	box-shadow: var(--header-btn-shadow);
+	animation: headerInOut 0.2s ease-out;
+}
+
+.header :active {
+	color: rgb(255, 255, 255);
+}
+
+@keyframes headerInOut {
+	0% {
+		box-shadow: none;
+	}
+	100% {
+		box-shadow: var(--header-btn-shadow);
+	}
 }
