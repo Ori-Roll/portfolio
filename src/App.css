@@ -3,14 +3,16 @@
 }
 
 :root {
-	--header-btn-shadow: rgba(0, 0, 0, 0.055) 5px 8px 15px, rgba(255, 255, 255, 0.692) -4px -4px 10px,
-		inset rgba(255, 255, 255, 0.822) -2px -2px 15px, inset rgba(255, 255, 255, 0.815) 2px 2px 20px;
+	--header-btn-shadow: rgba(0, 0, 0, 0.212) 0px 1px 1px
+		/* , rgba(255, 255, 255, 0.692) -4px -4px 10px */;
+	/* inset rgba(255, 255, 255, 0.822) -2px -2px 15px, inset rgba(255, 255, 255, 0.815) 2px 2px 20px; */
+	--global-background-color: rgb(243, 241, 239);
 }
 
 .main {
 	display: inline-block;
-	background-color: rgb(243, 241, 239);
-	margin: 20px auto;
+	background-color: var(--global-background-color);
+	padding: 5px;
 	width: 100%;
 	text-align: center;
 	height: 100%;
@@ -22,46 +24,53 @@
 }
 
 .header {
+	font-family: "Raleway", sans-serif;
+	font-weight: 500;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
-	padding: 10px 0 10px 0;
-	background: linear-gradient(
-		180deg,
-		rgb(240, 240, 240) 0%,
-		rgb(241, 241, 241) 20%,
-		rgba(255, 255, 255, 1) 100%
-	);
+	justify-content: space-around;
+	padding: 15px 0 0px 5px;
+	background-color: var(--global-background-color);
 }
 
 .header * {
 	text-decoration: none;
 	text-align: center;
 	outline: 0;
-	padding: 8px 15px;
 	min-width: 60px;
-	border-radius: 10px;
+	/* border-radius: 20px; */
 	color: rgb(105, 105, 105);
+	z-index: 1;
 }
 
 .header :hover {
 	box-shadow: var(--header-btn-shadow);
-	animation: headerInOut 0.2s ease-out;
+	/* animation: headerInOut 2s ease-out; */
 }
 
 .header :active {
-	color: rgb(255, 255, 255);
+	color: rgb(115, 119, 153);
+	font-style: italic;
 }
 
-@keyframes headerInOut {
+/* @keyframes headerInOut {
 	0% {
 		box-shadow: none;
 	}
 	100% {
 		box-shadow: var(--header-btn-shadow);
 	}
-}
+} */
 
+/* @keyframes headerInOut {
+	0% {
+		box-shadow: gray;
+	}
+	100% {
+		box-shadow: var(--header-btn-shadow);
+	}
+}
+ */
 /*---------------   CV RELATED   ----------------*/
 
 .cv {
@@ -69,7 +78,8 @@
 	font-weight: 100;
 	text-align: left;
 	background-color: white;
-	padding: 0 2em;
+	margin: 0.7em;
+	padding: 2em 2em;
 	display: grid;
 	grid-template-areas:
 		"cv-page-header"
@@ -79,10 +89,29 @@
 		"cv-section-skills"
 		"cv-section-contact";
 	row-gap: 1em;
+	max-width: 1800px;
 }
 
 .cv * {
 	padding: 0.2em 0;
+}
+
+.cv h2 {
+	font-size: large;
+	color: #314f63;
+	font-weight: 200;
+}
+
+.cv h3 {
+	font-weight: 300;
+	font-size: medium;
+}
+
+.cv h4 {
+	/* font-family: "Montserrat", sans-serif; */
+	font-weight: 100;
+	font-size: smaller;
+	color: #314f63;
 }
 
 .cv-page-header {
@@ -100,36 +129,35 @@
 	font-size: 1.2em;
 }
 
-.cv-section-contact {
-	grid-area: cv-section-contact;
-}
 .cv-section-about {
 	grid-area: cv-section-about;
 }
 .cv-section-work {
 	grid-area: cv-section-work;
 }
+
+.cv-section-contact {
+	grid-area: cv-section-contact;
+}
+
+.cv-section-contact h3 {
+	margin: 0 0 12px 0;
+}
+
 .cv-section-education {
 	grid-area: cv-section-education;
 }
+
+.cv-section-education h3 {
+	margin-bottom: 5px;
+}
+
 .cv-section-skills {
 	grid-area: cv-section-skills;
 }
 
-.cv p {
-	/* max-inline-size: 700px; */
-}
-
-.cv h2 {
-	font-size: large;
-	color: #314f63;
-	font-weight: 200;
-}
-.cv h4 {
-	/* font-family: "Montserrat", sans-serif; */
-	font-weight: 100;
-	font-size: smaller;
-	color: #314f63;
+.cv-section-skills h3 {
+	margin-bottom: 10px;
 }
 
 .cv-section-header {
@@ -143,20 +171,22 @@
 	border-top: none;
 }
 
-.cv-episode-header {
-	/* border: 1px solid black;
-	border-left: none;
-	border-right: none; */
-}
-
 .cv-episode-header * {
 	display: inline-block;
 	padding: 10px 15px 0 0;
 }
 
 @media (min-width: 650px) {
+	.header {
+		justify-content: start;
+	}
+	.header * {
+		padding: 7px 0 0 0;
+		margin: 0 0.3em 0 2.6em;
+	}
 	.cv {
-		padding: 0 5em;
+		padding: 3.2em 4em;
+		margin: 1.4em 5vw 3em 2.5em;
 		column-gap: 3em;
 		grid-template-columns: 3fr 2fr;
 		grid-template-rows: 1fr 3fr 2fr 3fr;
@@ -174,8 +204,23 @@
 			"cv-header-name cv-header-pic"
 			"cv-header-sub cv-header-pic";
 	}
+
 	.cv-page-header img {
-		padding: 0.7em 0 0 5em;
-		width: 60px;
+		padding: 0.8em 0 0 5em;
+		width: 70px;
 	}
+}
+
+.portfolio-page {
+	padding: 3.2em 4em;
+	height: 80vh;
+	margin: 1.4em 4vw 3em 2.5em;
+	/* column-gap: 3em;
+	grid-template-columns: 3fr 2fr;
+	grid-template-rows: 1fr 3fr 2fr 3fr;
+	grid-template-areas:
+		"cv-page-header ."
+		"cv-section-work cv-section-skills"
+		"cv-section-work cv-section-about"
+		"cv-section-education cv-section-contact"; */
 }

@@ -4,9 +4,9 @@ function Cv() {
 	return (
 		<div className='cv'>
 			<header className='cv-page-header'>
-				<img src='./avatar.png' />
+				<img src='./avatar.png' alt='-' />
 				<h1>Ori Roll</h1>
-				<p>Ex-architect applying software engineering position</p>
+				<p>Ex-architect applying for a front-end development position</p>
 			</header>
 
 			<div className='cv-print'>
@@ -15,9 +15,12 @@ function Cv() {
 
 			<div className='cv-section-contact'>
 				<h3 className='cv-section-header'>CONTACT ME</h3>
-				<p style={{ padding: "10px 0" }}>054-4897787</p>
+				<h4>By Phone:</h4>
+				<h4 style={{ fontSize: "1em" }}>054-4897787</h4>
+				<h4>email:</h4>
 				<a href='mailto:oriroll@gmail.com'>oriroll@gmail.com</a>
 				<br />
+				<h4>github page:</h4>
 				<a href='https://github.com/Ori-Roll'>https://github.com/Ori-Roll</a>
 			</div>
 
@@ -38,7 +41,7 @@ function Cv() {
 				<div className='cv-episode'>
 					<div className='cv-episode-header'>
 						<h2>Milner architects</h2>
-						<h4>2000-2003</h4>
+						<h4>2016-2019</h4>
 					</div>
 					<h3>Staff architect</h3>
 					<p>
@@ -51,7 +54,7 @@ function Cv() {
 				</div>
 				<div className='cv-episode'>
 					<div className='cv-episode-header'>
-						<h2>Work as an independent architect (under contract for Azrieli)</h2>
+						<h2>Independent work (under contract for Azrieli)</h2>
 						<h4>2015-2016</h4>
 					</div>
 					<h3>Architect</h3>
@@ -65,7 +68,7 @@ function Cv() {
 				<div className='cv-episode'>
 					<div className='cv-episode-header'>
 						<h2>Nahmias architects</h2>
-						<h4>2015-2016</h4>
+						<h4>2014-2015</h4>
 					</div>
 
 					<h3>Junior staff architect</h3>
