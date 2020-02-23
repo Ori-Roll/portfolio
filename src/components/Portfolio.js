@@ -19,7 +19,9 @@ function Portfolio() {
 		<div className='portfolio-page'>
 			<div>
 				{projects.map(proj => (
-					<Link to={`/portfolio/${proj.name}`}>{proj.name}</Link>
+					<Link to={`/portfolio/${proj.name}`} key={proj.key}>
+						{proj.name}
+					</Link>
 				))}
 			</div>
 			<Switch>
@@ -27,7 +29,7 @@ function Portfolio() {
 					<Redirect to={projects[0] ? `/portfolio/${projects[0].name}` : "/portfolio"} />
 				</Route>
 				{projects.map(proj => (
-					<Route path={`/portfolio/${proj.name}`}>
+					<Route key={proj.key} path={`/portfolio/${proj.name}`}>
 						<Project key={proj.key} details={proj} />
 					</Route>
 				))}
