@@ -9,10 +9,25 @@ function Portfolio() {
 	console.log(projects); */
 
 	const projects = [
-		{ key: "A", name: "A", discription: "A dis", img: "Aimg" },
-		{ key: "B", name: "B", discription: "B dis", img: "Bimg" },
-		{ key: "C", name: "C", discription: "C dis", img: "Cimg" },
-		{ key: "D", name: "D", discription: "D Dis", img: "Dimg" }
+		{
+			key: "calcalenderder",
+			name: "Calcalenderder",
+			discription:
+				"A calender app. The user can move through dates and the cpecified dates week will be shown. Create tasks with start and end dates that will be stored globally. Entries have Headlines, discriptions and colors that can be changed. Set tasks can be edited or dragged to a new time of the week. " +
+				"Calcalenderder uses context API to gather all entries data. It also orgenises the APIs state data by dates, making sure fatching an entry can be made efficiantly. Week data is stored locally and is fatched from the context",
+			img:
+				"https://www.rd.com/wp-content/uploads/2017/10/These-Funny-Dog-Videos-Are-the-Break-You-Need-Right-Now_493370860-Jenn_C-760x506.jpg",
+			link: "www.linkB"
+		},
+		{
+			key: "B",
+			name: "B",
+			discription: "Bthis",
+			img: "Bimg",
+			link: "www.linkB"
+		},
+		{ key: "C", name: "C", discription: "C dis", img: "Cimg", link: "www.linkc" },
+		{ key: "D", name: "D", discription: "D Dis", img: "Dimg", link: "www.linkD" }
 	];
 
 	return (
