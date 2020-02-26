@@ -23,7 +23,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	padding: 15px 0 0px 5px;
+	padding: 15px 0 0px 8px;
 	background-color: var(--global-background-color);
 }
 
@@ -48,7 +48,7 @@
 }
 
 .project {
-	background-color: white;
+	background-color: var(--global-background-color);
 	margin: 0.7em 0;
 }
 
@@ -64,6 +64,21 @@
 
 .project img {
 	width: 100%;
+}
+
+.portfolio-header {
+	padding: 1.8em;
+	text-decoration: none;
+	font-weight: 100;
+	text-align: left;
+}
+
+.portfolio-header * {
+	text-decoration: none;
+	font-size: 1.1em;
+	padding: 10px 20px;
+	font-weight: 400;
+	color: gray;
 }
 
 .cv {
@@ -169,7 +184,13 @@
 	padding: 10px 15px 0 0;
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 1200px) {
+	.project {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-columns: 5fr 2fr;
+		background-color: var(--global-background-color);
+	}
 }
 
 @media (min-width: 650px) {
@@ -182,16 +203,14 @@
 	}
 
 	.project {
-		display: grid;
-		grid-template-columns: auto;
-		padding: 2.5em;
-		display: grid;
-		grid-template-columns: 3fr 1fr;
+		padding: 0.5em 3em;
+		grid-template-rows: 0.1fr 1fr;
+		max-width: 1500px;
+		background-color: var(--global-background-color);
 	}
 
 	.project img {
 		object-fit: cover;
-		height: 80vh;
 	}
 
 	.cv {
@@ -219,6 +238,19 @@
 		padding: 0.8em 0 0 5em;
 		width: 70px;
 	}
+}
+
+.contact-page {
+	font-family: "Crimson Text", serif;
+	font-weight: 100;
+	text-align: left;
+	background-color: white;
+	margin: 2.5em 2.6em;
+	padding: 2em;
+	row-gap: 1em;
+	max-width: 1000px;
+	min-width: 100px;
+	min-height: 600px;
 }
 
 /* @keyframes headerInOut {

@@ -5,7 +5,7 @@ function Project(props) {
 	const { name, discription, img, link } = props.details;
 	return (
 		<div className='project'>
-			<img src={img} className='project-img' />
+			<img src={img} className='project-img' alt={"This IMG/GIF is not here"} />
 			<div className='proj-details'>
 				<h3>{name}</h3>
 				<p>{discription}</p>

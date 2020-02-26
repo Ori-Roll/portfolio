@@ -15,8 +15,8 @@ function Portfolio() {
 			discription:
 				"A calender app. The user can move through dates and the cpecified dates week will be shown. Create tasks with start and end dates that will be stored globally. Entries have Headlines, discriptions and colors that can be changed. Set tasks can be edited or dragged to a new time of the week. " +
 				"Calcalenderder uses context API to gather all entries data. It also orgenises the APIs state data by dates, making sure fatching an entry can be made efficiantly. Week data is stored locally and is fatched from the context",
-			img:
-				"https://www.rd.com/wp-content/uploads/2017/10/These-Funny-Dog-Videos-Are-the-Break-You-Need-Right-Now_493370860-Jenn_C-760x506.jpg",
+			img: "../Calcal.gif",
+			/* "https://www.rd.com/wp-content/uploads/2017/10/These-Funny-Dog-Videos-Are-the-Break-You-Need-Right-Now_493370860-Jenn_C-760x506.jpg", */
 			link: "www.linkB"
 		},
 		{
@@ -32,7 +32,7 @@ function Portfolio() {
 
 	return (
 		<div className='portfolio-page'>
-			<div>
+			<div className='portfolio-header'>
 				{projects.map(proj => (
 					<Link to={`/portfolio/${proj.name}`} key={proj.key}>
 						{proj.name}
