@@ -6,7 +6,7 @@ function Header() {
 		<div className='header'>
 			<Link to='/portfolio'>Portfolio</Link>
 			<Link to='/cv'>My Cv</Link>
-			<Link to='contact'>Contact me</Link>
+			<Link to='/contact'>Contact me</Link>
 		</div>
 	);
 }
