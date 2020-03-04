@@ -64,6 +64,7 @@
 
 .project img {
 	width: 100%;
+	box-shadow: none;
 }
 
 .portfolio-header {
@@ -211,6 +212,7 @@
 
 	.project img {
 		object-fit: cover;
+		box-shadow: 0 0 0 6px white, 0 0 0 7px rgb(214, 214, 214);
 	}
 
 	.cv {
@@ -251,6 +253,21 @@
 	max-width: 1000px;
 	min-width: 100px;
 	min-height: 600px;
+}
+
+.contact-page * {
+	font-family: "Crimson Text", serif;
+	background-color: white;
+	font-family: "Raleway", sans-serif;
+	font-weight: 200;
+}
+
+.contact-page h3 {
+	margin: 0 0 1em;
+}
+
+.contact-page br {
+	font-size: 0;
 }
 
 /* @keyframes headerInOut {
