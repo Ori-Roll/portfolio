@@ -97,7 +97,7 @@ function Portfolio() {
 						<Project key={proj.key} details={proj} />
 					</Route>
 				))}
-				<Route exact path='/portfolio'>
+				<Route path='/portfolio'>
 					<Redirect to={projects[0] ? `/portfolio/${projects[0].name}` : "/portfolio"} />
 				</Route>
 			</Switch>
