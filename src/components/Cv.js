@@ -1,10 +1,11 @@
 import React from "react";
+import avatar from "../images/avatar.png";
 
 function Cv() {
 	return (
 		<div className='cv'>
 			<header className='cv-page-header'>
-				<img src='./avatar.png' alt='-' />
+				<img src={avatar} alt='-' />
 				<h1>Ori Roll</h1>
 				<p>Ex-architect applying for a front-end development position</p>
 			</header>

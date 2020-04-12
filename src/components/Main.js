@@ -8,17 +8,11 @@ function Main() {
 	return (
 		<div className='main'>
 			<Switch>
+				<Route path='/portfolio' component={Portfolio} />
+				<Route path='/cv' component={Cv} />
+				<Route path='/contact' component={Contact} />
 				<Route exact path='/'>
 					<Redirect to='/portfolio' />
-				</Route>
-				<Route path='/portfolio'>
-					<Portfolio />
-				</Route>
-				<Route path='/cv'>
-					<Cv />
-				</Route>
-				<Route path='/contact'>
-					<Contact />
 				</Route>
 			</Switch>
 		</div>

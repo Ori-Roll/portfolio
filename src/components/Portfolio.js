@@ -3,6 +3,10 @@ import { Link, Route, Switch, Redirect } from "react-router-dom";
 import Project from "./Project.js";
 /* import * as projectsData from "./projects.json"; */
 
+import calcalImg from "../images/calcal.gif";
+import mapsImg from "../images/maps.gif";
+import calculatorImg from "../images/calc.png";
+
 function Portfolio() {
 	/* console.log("data is :" + projectsData); */
 	/* const projects = projectsData;
@@ -32,8 +36,7 @@ function Portfolio() {
 					functionality on other components is delegated to Day.
 				</span>
 			),
-			img: "../Calcal.gif",
-			/* "https://www.rd.com/wp-content/uploads/2017/10/These-Funny-Dog-Videos-Are-the-Break-You-Need-Right-Now_493370860-Jenn_C-760x506.jpg", */
+			img: calcalImg,
 			link: "https://ori-roll.github.io/Calcalendarder/",
 			repo: "https://github.com/Ori-Roll/Calcalendarder",
 			style: { gridTemplateColumns: "6fr 2fr" },
@@ -55,7 +58,7 @@ function Portfolio() {
 					placed organically where people might want to live) and other map elements.
 				</span>
 			),
-			img: "../maps.gif",
+			img: mapsImg,
 			link: "https://ori-roll.github.io/map-maker/",
 			repo: "https://github.com/Ori-Roll/map-maker",
 			style: { gridTemplateColumns: "2fr 2fr" },
@@ -64,19 +67,19 @@ function Portfolio() {
 			key: "calculator",
 			name: "Simple calculator",
 			discription: "A basic calculator app.",
-			img: "../calc.png",
+			img: calculatorImg,
 			link: "https://ori-roll.github.io/Test_CalculatorV2/",
 			repo: "https://github.com/Ori-Roll/Test_CalculatorV2",
 			style: { gridTemplateColumns: "1fr 2fr" },
-		},
+		} /* ,
 		{
 			key: "D",
 			name: "D",
 			discription: "D Dis",
-			img: "Dimg",
+			img: "./Dimg",
 			link: "www.linkD",
 			repo: "https://github.com/Ori-Roll/Calcalendarder",
-		},
+		}, */,
 	];
 
 	return (
@@ -89,14 +92,14 @@ function Portfolio() {
 				))}
 			</div>
 			<Switch>
-				<Route exact path='/portfolio'>
-					<Redirect to={projects[0] ? `/portfolio/${projects[0].name}` : "/portfolio"} />
-				</Route>
 				{projects.map((proj) => (
 					<Route key={proj.key} path={`/portfolio/${proj.name}`}>
 						<Project key={proj.key} details={proj} />
 					</Route>
 				))}
+				<Route exact path='/portfolio'>
+					<Redirect to={projects[0] ? `/portfolio/${projects[0].name}` : "/portfolio"} />
+				</Route>
 			</Switch>
 		</div>
 	);
