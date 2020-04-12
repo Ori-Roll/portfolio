@@ -141,6 +141,12 @@
 .cv-section-about {
 	grid-area: cv-section-about;
 }
+
+.cv-section-about h3 {
+	grid-area: cv-section-about;
+	margin: 0 0 12px 0;
+}
+
 .cv-section-work {
 	grid-area: cv-section-work;
 }
@@ -149,8 +155,12 @@
 	grid-area: cv-section-contact;
 }
 
+.cv-section-contact a {
+	margin: 0 0 10px 0;
+}
+
 .cv-section-contact h3 {
-	margin: 0 0 12px 0;
+	margin: 0 0 13px 0;
 }
 
 .cv-section-education {

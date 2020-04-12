@@ -16,7 +16,7 @@ function Cv() {
 
 			<div className='cv-section-contact'>
 				<h3 className='cv-section-header'>CONTACT ME</h3>
-				<h4>By Phone:</h4>
+				<h4>Phone:</h4>
 				<h4 style={{ fontSize: "1em" }}>054-4897787</h4>
 				<h4>email:</h4>
 				<a href='mailto:oriroll@gmail.com'>oriroll@gmail.com</a>
@@ -26,14 +26,15 @@ function Cv() {
 			</div>
 
 			<div className='cv-section-about'>
-				<h3 className='cv-section-header'>ABOUT ME</h3>
+				<h3 className='cv-section-header'>ABOUT ME - Why I changed my career</h3>
 				<p>
-					Im an ex architect !! <br />
-					STUFF GOES HERE
+					I am an ex architect and have worked as an architect for the last few years. <br />
+					Seeing that, for many reasons, I don't like architecture as much as I thought I would, and
+					given that I have always dabbled in programming and like it much more, I decided to have a
+					career change and look for a job as a software developer.
 					<br />
-					STUFF GOES HERE
-					<br />
-					STUFF GOES HERE
+					Though I have a lot of experience in architecture, I am only a junior developer, so I am
+					looking forward to bettering my skill and getting some experience in the field.
 				</p>
 			</div>
 
@@ -98,15 +99,19 @@ function Cv() {
 			<div className='cv-section-skills'>
 				<h3 className='cv-section-header'>SKILLS</h3>
 				<div className='cv-episode'>
-					<h3>Technical skills</h3>
+					<h2>
+						<u>Technical skills</u>
+					</h2>
 					<p> HTML, CSS, JS</p>
 					<p>REACT (with redux/contextAPI, react router)</p>
 					<p>AutoCAD, SketchUp, Revit, 3ds-max, Vray, Photoshop, Illustrator</p>
 				</div>
 				<div className='cv-episode'>
-					<h3>Languages</h3>
+					<h2>
+						<u>Languages</u>
+					</h2>
 					<p>Hebrew - native speaker</p>
-					<p> English - native speaker level</p>
+					<p>English - native speaker level</p>
 				</div>
 			</div>
 		</div>
