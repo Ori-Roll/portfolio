@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, Route, Switch, Redirect } from "react-router-dom";
+import { NavLink, Route, Switch, Redirect } from "react-router-dom";
 import Project from "./Project.js";
 /* import * as projectsData from "./projects.json"; */
 
@@ -43,10 +43,13 @@ function Portfolio() {
 		},
 		{
 			key: "map-creator",
-			name: "Map Creator WIP",
+			name: "Map Creator",
 			discription: (
 				<span>
-					A work in progress, this is an experiment with procedurally creating a map. <br />
+					Work in progress.
+					<br />
+					<br />
+					This is an experiment with procedurally creating a map. <br />
 					The creator first creates clusters of mountains (ridges) according to a few initial
 					parameters. The code then makes a 2d points precipitation map and proceeds to simulate how
 					the water in each point will flow from higher areas to lower ones, thus creating irrigated
@@ -86,9 +89,9 @@ function Portfolio() {
 		<div className='portfolio-page'>
 			<div className='portfolio-header'>
 				{projects.map((proj) => (
-					<Link to={`/portfolio/${proj.name}`} key={proj.key}>
+					<NavLink to={`/portfolio/${proj.name}`} key={proj.key} activeStyle={{ color: "#0a6ecc" }}>
 						{proj.name}
-					</Link>
+					</NavLink>
 				))}
 			</div>
 			<Switch>

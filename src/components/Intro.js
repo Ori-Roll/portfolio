@@ -5,20 +5,26 @@ function Intro() {
 	return (
 		<div className='intro-page'>
 			<div className='intro-head'>
-				<h1>ORI ROLL</h1>
-				<br />
-				<h2>Portfolio and CV</h2>
+				<h1 style={{ color: "#535e78" }}>Ori Roll</h1>
+				<h2>PORTFOLIO & CV</h2>
 			</div>
-
-			<Link className='intro-link' to='/portfolio'>
-				Portfolio
-			</Link>
-			<Link className='intro-link' to='/cv'>
-				My Cv
-			</Link>
-			<Link className='intro-link' to='/contact'>
-				Contact me
-			</Link>
+			<div>
+				<Link
+					className='intro-link'
+					to='/portfolio'
+					style={{ color: "#ad767d", borderColor: "#ad767d" }}>
+					PORTFOLIO
+				</Link>
+				<Link className='intro-link' to='/cv' style={{ color: "#798eb0", borderColor: "#798eb0" }}>
+					MY CV
+				</Link>
+				<Link
+					className='intro-link'
+					to='/contact'
+					style={{ color: "#80ad76", borderColor: "#80ad76" }}>
+					CONTACT ME
+				</Link>
+			</div>
 		</div>
 	);
 }
