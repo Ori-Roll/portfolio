@@ -32,9 +32,6 @@ function Cv() {
 					Seeing that, for many reasons, I don't like architecture as much as I thought I would, and
 					given that I have always dabbled in programming and like it much more, I decided to have a
 					career change and look for a job as a software developer.
-					<br />
-					Though I have a lot of experience in architecture, I am only a junior developer, so I am
-					looking forward to bettering my skill and getting some experience in the field.
 				</p>
 			</div>
 
@@ -102,7 +99,7 @@ function Cv() {
 					<h2>
 						<u>Technical skills</u>
 					</h2>
-					<p> HTML, CSS, JS</p>
+					<p> HTML, CSS, JavaScript</p>
 					<p>REACT (with redux/contextAPI, react router)</p>
 					<p>AutoCAD, SketchUp, Revit, 3ds-max, Vray, Photoshop, Illustrator</p>
 				</div>
