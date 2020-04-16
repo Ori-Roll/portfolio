@@ -8,7 +8,7 @@ function Intro() {
 				<h1 style={{ color: "#535e78" }}>Ori Roll</h1>
 				<h2>PORTFOLIO & CV</h2>
 			</div>
-			<div>
+			<div className='intro-links'>
 				<Link
 					className='intro-link'
 					to='/portfolio'

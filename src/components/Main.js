@@ -13,8 +13,6 @@ function Main() {
 				<Route path='/cv' component={Cv} />
 				<Route path='/contact' component={Contact} />
 				<Route exact path='/' component={Intro} />
-				{/* <Redirect to='/portfolio' />
-				</Route> */}
 			</Switch>
 		</div>
 	);

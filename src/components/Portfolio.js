@@ -18,22 +18,25 @@ function Portfolio() {
 			name: "Calcalenderder",
 			discription: (
 				<span>
-					It's a react app that also uses the react context api for storing all user tasks so the
-					app can use it whenever it needs to.
+					A react app that uses reacts context api for cross component access to user tasks.
 					<br />
-					The context sorts the tasks by date and time so it's possible to get tasks more
-					efficiently. The app uses the js native date system (like Date(), getTime, ext) and
-					doesn't use external date managing packages.
 					<br />
-					It was good practice in creating forms in react and also in using draggables for moving
-					tasks around. The side panel with the dates uses a package called reactCalander (only for
-					its very basic functionality - when a user clicks a date on the side panel the app gets a
-					new date object to set current focus date). Users can also change the length of a task -
-					the tasks endDate - by dragging its bottom edge (this does not currently work well in
-					firefox).
+					<h4>Key practices used: </h4>
+					- Js native date system (new Date(), getTime, ext). <br />
 					<br />
-					Most of the "smart" functionality is concentrated in the "Day" component. Most of the
-					functionality on other components is delegated to Day.
+					- Creating forms in react. <br />
+					<br />
+					- Native draggables API for moving tasks around and resizing them. Resizing changes task
+					endTime (this does not currently work well in firefox).
+					<br />
+					<br />
+					- Side panel uses a package called reactCalander
+					<br />
+					<br />
+					- Smart functionality is concentrated in "Day" component. <br /> Most other functionality
+					is delegated to Day.
+					<br />
+					<br />- Responsive design.
 				</span>
 			),
 			img: calcalImg,
