@@ -97,6 +97,7 @@
 
 .proj-details {
 	padding: 1em 1em 1em 1.5em;
+	line-height: 1.05em;
 }
 
 .proj-details * {
@@ -143,6 +144,7 @@
 	display: grid;
 	grid-template-areas:
 		"cv-page-header"
+		"cv-page-header-print"
 		"cv-section-about"
 		"cv-section-work"
 		"cv-section-education"
@@ -189,6 +191,14 @@
 	font-size: 1.2em;
 }
 
+.cv-page-header-print {
+	grid-area: cv-page-header-print;
+	display: none;
+}
+.cv-page-header-print img {
+	display: block;
+	margin: 0 auto 0;
+}
 .cv-section-about {
 	grid-area: cv-section-about;
 }
@@ -281,12 +291,12 @@
 
 	.cv {
 		padding: 3.2em 4em;
-		margin: 1.4em 5vw 3em 2.5em;
+		margin: 1.4em 6vw 3em 2.5em;
 		column-gap: 3em;
 		grid-template-columns: 3fr 2fr;
 		grid-template-rows: 1fr 3fr 2fr 3fr;
 		grid-template-areas:
-			"cv-page-header ."
+			"cv-page-header cv-page-header-print"
 			"cv-section-work cv-section-skills"
 			"cv-section-work cv-section-about"
 			"cv-section-education cv-section-contact";
@@ -303,6 +313,16 @@
 	.cv-page-header img {
 		padding: 0.8em 0 0 5em;
 		width: 70px;
+	}
+	.cv-page-header-print {
+		grid-area: cv-page-header-print;
+		float: left;
+		display: block;
+	}
+	.cv-page-header-print img {
+		float: right;
+		cursor: pointer;
+		padding: 0 0.4em;
 	}
 }
 
@@ -332,6 +352,57 @@
 
 .contact-page br {
 	font-size: 0;
+}
+
+/*------FOR PRINT-------*/
+@media print {
+	.header {
+		display: none;
+	}
+
+	html,
+	body {
+		width: 210mm;
+		height: 297mm;
+		margin: 0;
+		padding: 0;
+	}
+
+	.cv {
+		/* padding: 3.2mm 2mm; */
+		/* margin: 1.4em 2em 3em 2.5em; */
+		margin: 0;
+		padding: 5mm 10mm 0 0;
+		column-gap: 5mm;
+		grid-template-columns: 3fr 2fr;
+		grid-template-rows: 1fr 3fr 3fr 3fr;
+		grid-template-areas:
+			"cv-page-header cv-page-header"
+			"cv-section-work cv-section-skills"
+			"cv-section-work cv-section-about"
+			"cv-section-education cv-section-contact";
+	}
+	.cv-page-header {
+		text-align: left;
+		display: grid;
+		grid-template-columns: 7fr 1fr;
+		grid-template-areas:
+			"cv-header-name cv-header-pic"
+			"cv-header-sub cv-header-pic";
+	}
+
+	.cv-page-header img {
+		/* padding: 0.8em 0 0 5em; */
+		width: 20mm;
+		float: right;
+	}
+	.cv-page-header-print {
+		display: none;
+		float: left;
+	}
+	.cv-page-header-print img {
+		float: right;
+	}
 }
 
 /* @keyframes headerInOut {

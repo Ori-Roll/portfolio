@@ -1,7 +1,23 @@
 import React from "react";
 import avatar from "../images/avatar.png";
+import printIcon from "../images/print-icon.png";
+import pdfIcon from "../images/pdf17.svg";
+import pdfCv from "../images/pdf-cv.pdf";
 
 function Cv() {
+	function goPDF() {
+		let newWindow = window.open(pdfCv);
+		/* if (newWindow === "undefiend") {
+			setTimeout(() => goPrint(), 1000);
+		} else {
+			newWindow.save();
+		} */
+	}
+
+	function goPrint() {
+		window.print();
+	}
+
 	return (
 		<div className='cv'>
 			<header className='cv-page-header'>
@@ -10,8 +26,9 @@ function Cv() {
 				<p>Ex-architect applying for a front-end development position</p>
 			</header>
 
-			<div className='cv-print'>
-				<p>&#xf1c1;</p>
+			<div className='cv-page-header-print'>
+				<img src={printIcon} alt='-' style={{ height: "2.5em" }} onClick={() => goPrint()} />
+				<img src={pdfIcon} alt='-' style={{ height: "2.3em" }} onClick={() => goPDF()} />
 			</div>
 
 			<div className='cv-section-contact'>

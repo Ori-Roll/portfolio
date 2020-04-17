@@ -21,21 +21,17 @@ function Portfolio() {
 					A react app that uses reacts context api for cross component access to user tasks.
 					<br />
 					<br />
-					<h4>Key practices used: </h4>
+					<u>Key practices used:</u>
+					<br />
 					- Js native date system (new Date(), getTime, ext). <br />
-					<br />
 					- Creating forms in react. <br />
-					<br />
 					- Native draggables API for moving tasks around and resizing them. Resizing changes task
 					endTime (this does not currently work well in firefox).
 					<br />
-					<br />
 					- Side panel uses a package called reactCalander
-					<br />
 					<br />
 					- Smart functionality is concentrated in "Day" component. <br /> Most other functionality
 					is delegated to Day.
-					<br />
 					<br />- Responsive design.
 				</span>
 			),
@@ -52,12 +48,12 @@ function Portfolio() {
 					Work in progress.
 					<br />
 					<br />
-					This is an experiment with procedurally creating a map. <br />
-					The creator first creates clusters of mountains (ridges) according to a few initial
-					parameters. The code then makes a 2d points precipitation map and proceeds to simulate how
-					the water in each point will flow from higher areas to lower ones, thus creating irrigated
-					areas (that will grow trees) where water accumulates, and areas where water overflows,
-					creating rivers and lakes.
+					An experiment with procedurally creating a map. <br />
+					The creator first randomly creates clusters of mountains (ridges) in an array according to
+					a few initial parameters. The code then makes (one) array of a 2d points precipitation map
+					and proceeds to simulate how the water in each point will flow from higher areas points to
+					lower ones, thus creating irrigated areas (that will grow trees) where water accumulates,
+					and areas where water overflows, creating rivers and lakes.
 					<br />
 					Eventually the map will come with a menu allowing you to choose the amount of mountains
 					and their composition, the amount of rain, affecting rivers and vegetation, houses (to be
