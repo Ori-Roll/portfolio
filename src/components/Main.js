@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Portfolio from "./Portfolio.js";
 import Cv from "./Cv.js";
 import Contact from "./Contact.js";
