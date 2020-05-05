@@ -6,6 +6,7 @@ import Project from "./Project.js";
 import calcalImg from "../images/calcal.gif";
 import mapsImg from "../images/maps.gif";
 import calculatorImg from "../images/calc.png";
+import listerImg from "../images/Lister.png";
 
 function Portfolio() {
 	/* console.log("data is :" + projectsData); */
@@ -41,6 +42,35 @@ function Portfolio() {
 			style: { gridTemplateColumns: "6fr 2fr" },
 		},
 		{
+			key: "lister",
+			name: "Star Wars API Lister",
+			discription: (
+				<span>
+					Star-Wars catalogue using SWAPI.
+					<br />
+					A pet project practicing redux axios and more <br />
+					<br />
+					Sorts entries from the star wars API ("https://swapi.py4e.com/api/") into groups <br />
+					Choose a group to show category items <br />
+					<br />
+					<u>Key practices used:</u>
+					<br />
+					- Using the Redux store for cross component access to have all already downloaded data
+					(caching).
+					<br />
+					- Using axios to get and set data on a remote API.
+					<br />
+					- Managing asynchronous actions and API replies.
+					<br />
+					- Possibly using material-ui for user interface. (WIP)
+					<br /> - Using more 3rd party libraries like lodash.
+				</span>
+			),
+			img: listerImg,
+			link: "https://ori-roll.github.io/SW-Lister/",
+			repo: "https://github.com/Ori-Roll/SW-Lister",
+		},
+		{
 			key: "map-creator",
 			name: "Map Creator",
 			discription: (
@@ -50,10 +80,12 @@ function Portfolio() {
 					<br />
 					An experiment with procedurally creating a map. <br />
 					The creator first randomly creates clusters of mountains (ridges) in an array according to
-					a few initial parameters. The code then makes (one) array of a 2d points precipitation map
-					and proceeds to simulate how the water in each point will flow from higher areas points to
-					lower ones, thus creating irrigated areas (that will grow trees) where water accumulates,
-					and areas where water overflows, creating rivers and lakes.
+					a few initial parameters.
+					<br />
+					The code then makes (one) array of a 2d points precipitation map and proceeds to simulate
+					how the water in each point will flow from higher areas points to lower ones, thus
+					creating irrigated areas (that will grow trees), and areas where water overflows, creating
+					rivers and lakes.
 					<br />
 					Eventually the map will come with a menu allowing you to choose the amount of mountains
 					and their composition, the amount of rain, affecting rivers and vegetation, houses (to be
@@ -73,15 +105,7 @@ function Portfolio() {
 			link: "https://ori-roll.github.io/Test_CalculatorV2/",
 			repo: "https://github.com/Ori-Roll/Test_CalculatorV2",
 			style: { gridTemplateColumns: "1fr 2fr" },
-		} /* ,
-		{
-			key: "D",
-			name: "D",
-			discription: "D Dis",
-			img: "./Dimg",
-			link: "www.linkD",
-			repo: "https://github.com/Ori-Roll/Calcalendarder",
-		}, */,
+		},
 	];
 
 	return (

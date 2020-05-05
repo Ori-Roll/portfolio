@@ -38,7 +38,11 @@ function Cv() {
 				<h4>email:</h4>
 				<a href='mailto:oriroll@gmail.com'>oriroll@gmail.com</a>
 				<br />
-				<h4>github page:</h4>
+				<h4>Portfolio:</h4>
+				<a href='https://ori-roll.github.io/portfolio/#/'>
+					https://ori-roll.github.io/portfolio/#/
+				</a>
+				<h4>GitHub page:</h4>
 				<a href='https://github.com/Ori-Roll'>https://github.com/Ori-Roll</a>
 			</div>
 
