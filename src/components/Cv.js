@@ -1,4 +1,5 @@
 import React from "react";
+import LevelBar from "./LevelBar.js";
 import avatar from "../images/avatar.png";
 import printIcon from "../images/print-icon.png";
 import pdfIcon from "../images/pdf17.svg";
@@ -23,7 +24,9 @@ function Cv() {
 			<header className='cv-page-header'>
 				<img src={avatar} alt='-' />
 				<h1>Ori Roll</h1>
-				<p>Ex-architect applying for a front-end development position</p>
+				<p className='cv-header-sub'>
+					Novice front end developer with a background in architecture
+				</p>
 			</header>
 
 			<div className='cv-page-header-print'>
@@ -33,26 +36,37 @@ function Cv() {
 
 			<div className='cv-section-contact'>
 				<h3 className='cv-section-header'>CONTACT ME</h3>
-				<h4>Phone:</h4>
-				<h4 style={{ fontSize: "1em" }}>054-4897787</h4>
-				<h4>email:</h4>
-				<a href='mailto:oriroll@gmail.com'>oriroll@gmail.com</a>
-				<br />
-				<h4>Portfolio:</h4>
-				<a href='https://ori-roll.github.io/portfolio/#/'>
-					https://ori-roll.github.io/portfolio/#/
-				</a>
-				<h4>GitHub page:</h4>
-				<a href='https://github.com/Ori-Roll'>https://github.com/Ori-Roll</a>
+				<div className='cv-section-contact-deatils'>
+					<div>
+						<h4>Phone:</h4>
+						<h4 style={{ fontSize: "1em" }}>054-4897787</h4>
+					</div>
+					<div>
+						<h4>Email:</h4>
+						<a href='mailto:oriroll@gmail.com'>oriroll@gmail.com</a>
+					</div>
+					<div className='cv-portfolio-link'>
+						<h4>Portfolio:</h4>
+						<a href='https://ori-roll.github.io/portfolio/#/'>
+							https://ori-roll.github.io/portfolio/#/
+						</a>
+					</div>
+					<div className='cv-github-link'>
+						<h4>GitHub page:</h4>
+						<a href='https://github.com/Ori-Roll'>https://github.com/Ori-Roll</a>
+					</div>
+				</div>
 			</div>
 
 			<div className='cv-section-about'>
 				<h3 className='cv-section-header'>ABOUT ME - Why I changed my career</h3>
 				<p>
-					I am an ex architect and have worked as an architect for the last few years. <br />
-					Seeing that, for many reasons, I don't like architecture as much as I thought I would, and
-					given that I have always dabbled in programming and like it much more, I decided to have a
+					I am an ex architect and have worked as an architect for the last few years.
+					<br />
+					I have always loved programming and dicided, given the passion I have for it, to have a
 					career change and look for a job as a software developer.
+					<br />I like the idea of finding the simplest and most efficient solution for a
+					complicated problem and I'm always trying to create clear and readable code.
 				</p>
 			</div>
 
@@ -116,20 +130,29 @@ function Cv() {
 			</div>
 			<div className='cv-section-skills'>
 				<h3 className='cv-section-header'>SKILLS</h3>
-				<div className='cv-episode'>
-					<h2>
+				<div className='cv-episode-skills-body'>
+					{/* <h2>
 						<u>Technical skills</u>
-					</h2>
-					<p> HTML, CSS, JavaScript</p>
-					<p>REACT (with redux/contextAPI, react router)</p>
-					<p>AutoCAD, SketchUp, Revit, 3ds-max, Vray, Photoshop, Illustrator</p>
-				</div>
-				<div className='cv-episode'>
-					<h2>
-						<u>Languages</u>
-					</h2>
-					<p>Hebrew - native speaker</p>
-					<p>English - native speaker level</p>
+					</h2> */}
+					<div className='cv-skill-prog'>
+						<LevelBar level={3} skill={"HTML"} />
+						<LevelBar level={2.5} skill={"CSS"} />
+						<LevelBar level={3.5} skill={"JavaScript"} />
+						<LevelBar
+							level={3}
+							skill={"React.js"}
+							comment={"(with redux/contextAPI, react router)"}
+						/>
+					</div>
+					<div className='cv-skill-others'>
+						<h2>Other Skills</h2>
+						<p>AutoCAD, SketchUp, Revit, 3ds-max, Vray, Photoshop, Illustrator</p>
+					</div>
+					<div className='cv-skill-languages'>
+						<h2>Languages</h2>
+						<p>Hebrew - native speaker</p>
+						<p>English - native speaker level</p>
+					</div>
 				</div>
 			</div>
 		</div>
