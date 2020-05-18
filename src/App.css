@@ -445,17 +445,28 @@
 	font-family: "Crimson Text", serif;
 	background-color: white;
 	font-family: "Raleway", sans-serif;
-	font-weight: 200;
+	font-weight: 400;
 }
 
-.contact-page h3 {
-	margin: 0 0 1em;
+.contact-section-contact-deatils * {
+	margin: 15px 0 0;
+	color: rgb(0, 0, 0);
+	text-decoration: none;
 }
 
-.contact-page br {
-	font-size: 0;
+.contact-section-contact-deatils a {
+	font-weight: 500;
 }
 
+.contact-section-contact-deatils a:hover {
+	color: rgb(7, 86, 160);
+	text-decoration: underline;
+}
+
+.contact-phone {
+	margin: 2px 0;
+	font-weight: 500;
+}
 /*------FOR PRINT-------*/
 @media print {
 	.header {

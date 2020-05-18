@@ -129,7 +129,7 @@ function Cv() {
 				</div>
 				<div className='cv-episode'>
 					<h2>IDF</h2>
-					<h4>2000-2003</h4>
+					<h4>2000&#8202;-&#8202;2003</h4>
 					<p>Medic in the Combat engineering corps (“Handasa kravit”)</p>
 				</div>
 			</div>
