@@ -69,9 +69,9 @@ function Cv() {
 				<p>
 					Hey, I'm Ori, an ex building architect (b.arch from the Technion), who has written a lot
 					of code as a hobby. Recently, I've decided to up my game, improve my skills, and start
-					looking for a job as a full time web developer. I've created websites, games, a
-					functioning calendar app (like google calendar) and more. I like simple and efficient
-					solutions for programming problems and always try having reusable and concise code.
+					looking for a job as a full time web developer. I've created websites, games, a calendar
+					app (like google calendar) and more. I like simple and efficient solutions for programming
+					problems and always try having reusable and concise code.
 				</p>
 			</div>
 
