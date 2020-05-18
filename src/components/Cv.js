@@ -39,7 +39,7 @@ function Cv() {
 				<div className='cv-section-contact-deatils'>
 					<div>
 						<h4>Phone:</h4>
-						<h4 style={{ fontSize: "1em" }}>054-4897787</h4>
+						<p /* style={{ fontSize: "1em" }} */>054-&#8202;4897787</p>
 					</div>
 					<div>
 						<h4>Email:</h4>
@@ -47,15 +47,19 @@ function Cv() {
 					</div>
 					<div className='cv-github-link'>
 						<h4>GitHub page:</h4>
-						<a href='https://github.com/Ori-Roll'>github.com/Ori-Roll</a>
+						<a href='https://github.com/Ori-Roll'>github.com&#8202;/&#8202;Ori-Roll</a>
 					</div>
 					<div className='cv-portfolio-link'>
 						<h4>Portfolio:</h4>
-						<a href='https://ori-roll.github.io/portfolio/#/'>ori-roll.github.io/portfolio</a>
+						<a href='https://ori-roll.github.io/portfolio/#/'>
+							ori-roll.github.io&#8202;/&#8202;portfolio
+						</a>
 					</div>
 					<div className='cv-portfolio-link'>
 						<h4>Linkedin:</h4>
-						<a href='https://www.linkedin.com/in/ori-roll-11152a1a7/'>linkedin.com/ori-roll</a>
+						<a href='https://www.linkedin.com/in/ori-roll-11152a1a7/'>
+							linkedin.com&#8202;/&#8202;ori-roll
+						</a>
 					</div>
 				</div>
 			</div>
@@ -63,10 +67,11 @@ function Cv() {
 			<div className='cv-section-about'>
 				<h3 className='cv-section-header'>ABOUT ME</h3>
 				<p>
-					I am an ex architect, with a b.arch degree from the Technion. During the last few years I
-					wrote code as a hobby (mostly in vanilla Js). I like finding simple and efficient
-					solutions for programming problems and having concise code that I can easily reuse. So, I
-					decided to up my game, improve my skills, and start looking for a job as a FE developer.
+					Hey, I'm Ori, an ex building architect (b.arch from the Technion), who has written a lot
+					of code as a hobby. Recently, I've decided to up my game, improve my skills, and start
+					looking for a job as a full time web developer. I've created websites, games, a
+					functioning calendar app (like google calendar) and more. I like simple and efficient
+					solutions for programming problems and always try having reusable and concise code.
 				</p>
 			</div>
 
@@ -75,7 +80,7 @@ function Cv() {
 				<div className='cv-episode'>
 					<div className='cv-episode-header'>
 						<h2>Milner architects</h2>
-						<h4>2016-2019</h4>
+						<h4>2016&#8202;-&#8202;2019</h4>
 					</div>
 					<h3>Staff architect</h3>
 					<p>
@@ -89,20 +94,20 @@ function Cv() {
 				<div className='cv-episode'>
 					<div className='cv-episode-header'>
 						<h2>Independent work (under contract for Azrieli)</h2>
-						<h4>2015-2016</h4>
+						<h4>2015&#8202;-&#8202;2016</h4>
 					</div>
 					<h3>Architect</h3>
 					<p>
 						Assisting Azrieli’s head architect with internal projects, offices, replanning of
-						buildings sections and adjusting plans to tenant needs. Producing plans, 3d modeling
-						etc., working in conjunction with external architects and building consultants.
+						buildings sections and adjusting plans to tenant needs. Producing plans, 3d modeling and
+						more. working in conjunction with external architects and building consultants.
 						Additional work as an independent architect for the private sector.
 					</p>
 				</div>
 				<div className='cv-episode'>
 					<div className='cv-episode-header'>
 						<h2>Nahmias architects</h2>
-						<h4>2014-2015</h4>
+						<h4>2014&#8202;-&#8202;2015</h4>
 					</div>
 
 					<h3>Junior staff architect</h3>

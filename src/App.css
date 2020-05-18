@@ -229,13 +229,13 @@
 .cv-section-contact-deatils a {
 	text-decoration: none;
 	font-size: 18px;
-	font-weight: 300;
-	color: rgb(80, 122, 199);
+	/* font-weight: 400; */
+	color: rgb(34, 44, 63);
 }
 
 .cv-section-contact-deatils a:visited {
 	text-decoration: none;
-	color: rgb(112, 105, 168);
+	color: rgb(44, 43, 54);
 }
 .cv-section-contact-deatils a:hover {
 	text-decoration: underline;
@@ -246,6 +246,7 @@
 	grid-template-rows: repeat(3, [col] auto);
 	grid-template-columns: repeat(2, [col] auto);
 	gap: 5px;
+	font-weight: 400;
 }
 
 .cv-portfolio-link {

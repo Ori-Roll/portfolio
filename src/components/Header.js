@@ -15,7 +15,7 @@ function Header() {
 				Portfolio
 			</NavLink>
 			<NavLink to='/cv' activeStyle={{ color: "#0a6ecc" }}>
-				My Cv
+				My CV
 			</NavLink>
 			<NavLink to='/contact' activeStyle={{ color: "#0a6ecc" }}>
 				Contact me
