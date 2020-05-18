@@ -45,28 +45,28 @@ function Cv() {
 						<h4>Email:</h4>
 						<a href='mailto:oriroll@gmail.com'>oriroll@gmail.com</a>
 					</div>
-					<div className='cv-portfolio-link'>
-						<h4>Portfolio:</h4>
-						<a href='https://ori-roll.github.io/portfolio/#/'>
-							https://ori-roll.github.io/portfolio/#/
-						</a>
-					</div>
 					<div className='cv-github-link'>
 						<h4>GitHub page:</h4>
-						<a href='https://github.com/Ori-Roll'>https://github.com/Ori-Roll</a>
+						<a href='https://github.com/Ori-Roll'>github.com/Ori-Roll</a>
+					</div>
+					<div className='cv-portfolio-link'>
+						<h4>Portfolio:</h4>
+						<a href='https://ori-roll.github.io/portfolio/#/'>ori-roll.github.io/portfolio</a>
+					</div>
+					<div className='cv-portfolio-link'>
+						<h4>Linkedin:</h4>
+						<a href='https://www.linkedin.com/in/ori-roll-11152a1a7/'>linkedin.com/ori-roll</a>
 					</div>
 				</div>
 			</div>
 
 			<div className='cv-section-about'>
-				<h3 className='cv-section-header'>ABOUT ME - Why I changed my career</h3>
+				<h3 className='cv-section-header'>ABOUT ME</h3>
 				<p>
-					I am an ex architect and have worked as an architect for the last few years.
-					<br />
-					I have always loved programming and dicided, given the passion I have for it, to have a
-					career change and look for a job as a software developer.
-					<br />I like the idea of finding the simplest and most efficient solution for a
-					complicated problem and I'm always trying to create clear and readable code.
+					I am an ex architect, with a b.arch degree from the Technion. During the last few years I
+					wrote code as a hobby (mostly in vanilla Js). I like finding simple and efficient
+					solutions for programming problems and having concise code that I can easily reuse. So, I
+					decided to up my game, improve my skills, and start looking for a job as a FE developer.
 				</p>
 			</div>
 
@@ -160,3 +160,8 @@ function Cv() {
 }
 
 export default Cv;
+
+/* I have always written code as a hobby. Recently I've decided to have a career 
+change and look for a job as a software developer.
+<br />I like the idea of finding the simplest and most efficient solution for a
+complicated problem and I'm always trying to create clear and readable code. */

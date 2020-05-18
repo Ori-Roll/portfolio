@@ -146,12 +146,12 @@
 		"cv-page-header"
 		"cv-page-header-print"
 		"cv-section-about"
-		"cv-section-work"
-		"cv-section-education"
 		"cv-section-skills"
+		"cv-section-education"
+		"cv-section-work"
 		"cv-section-contact";
 	row-gap: 1em;
-	max-width: 1800px;
+	max-width: 1600px;
 }
 
 .cv * {
@@ -178,7 +178,6 @@
 
 .cv-page-header {
 	grid-area: cv-page-header;
-
 	text-align: center;
 	font-family: "Raleway", sans-serif;
 }
@@ -209,7 +208,8 @@
 	margin: 0 auto 0;
 }
 .cv-section-about {
-	font-size: larger;
+	font-size: large;
+	text-align: justify;
 	grid-area: cv-section-about;
 }
 
@@ -226,10 +226,21 @@
 .cv-section-contact {
 	grid-area: cv-section-contact;
 }
-
-/* .cv-section-contact-deatils {
+.cv-section-contact-deatils a {
+	text-decoration: none;
+	font-size: 18px;
+	font-weight: 300;
+	color: rgb(80, 122, 199);
 }
- */
+
+.cv-section-contact-deatils a:visited {
+	text-decoration: none;
+	color: rgb(112, 105, 168);
+}
+.cv-section-contact-deatils a:hover {
+	text-decoration: underline;
+	color: rgb(0, 140, 255);
+}
 .cv-section-contact-deatils {
 	display: grid;
 	grid-template-rows: repeat(3, [col] auto);
@@ -267,17 +278,19 @@
 
 .cv-episode-skills-body {
 	display: grid;
-	grid-template-columns: 0.6fr 0.6fr;
+	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 0.5fr 0.4fr;
-	gap: 2em;
+	gap: 5px;
 	grid-template-areas:
 		"cv-skill-prog cv-skill-others"
 		"cv-skill-prog cv-skill-languages";
+	margin: 0 1em 1em 0;
 }
 .cv-skill-prog {
 	grid-area: cv-skill-prog;
 	padding: 10px 0 0;
 	display: grid;
+	gap: 0.6em;
 	grid-template-rows: 1fr 1fr;
 	grid-template-columns: 1fr 1.6fr;
 }
@@ -372,6 +385,7 @@
 			"cv-section-work 		cv-section-contact"
 			"cv-section-work		.";
 	}
+
 	.cv-page-header {
 		text-align: left;
 		display: grid;
@@ -387,7 +401,12 @@
 		margin: 0;
 		width: 70px;
 	}
-
+	.cv-section-about {
+		font-size: larger;
+	}
+	.cv-section-about * {
+		margin-bottom: 1em;
+	}
 	.skill-bar {
 		padding-right: 15px;
 	}
