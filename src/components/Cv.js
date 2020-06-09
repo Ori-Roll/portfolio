@@ -142,9 +142,9 @@ function Cv() {
 					<div className='cv-skill-prog'>
 						<LevelBar level={3} skill={"HTML"} />
 						<LevelBar level={2.5} skill={"CSS"} />
-						<LevelBar level={3.5} skill={"JavaScript"} />
+						<LevelBar level={4} skill={"JavaScript"} />
 						<LevelBar
-							level={3}
+							level={3.5}
 							skill={"React.js"}
 							comment={"(with redux/contextAPI, react router)"}
 						/>

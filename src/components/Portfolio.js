@@ -97,15 +97,6 @@ function Portfolio() {
 			repo: "https://github.com/Ori-Roll/map-maker",
 			style: { gridTemplateColumns: "2fr 2fr" },
 		},
-		{
-			key: "calculator",
-			name: "Simple calculator",
-			discription: "My first React app, a basic calculator app.",
-			img: calculatorImg,
-			link: "https://ori-roll.github.io/Test_CalculatorV2/",
-			repo: "https://github.com/Ori-Roll/Test_CalculatorV2",
-			style: { gridTemplateColumns: "1fr 2fr" },
-		},
 	];
 
 	return (

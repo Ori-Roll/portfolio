@@ -23,7 +23,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	padding: 15px 0 15px 8px;
+	padding: 25px 0 10px 8px;
 	background-color: var(--global-background-color);
 }
 
@@ -119,7 +119,6 @@
 }
 
 .portfolio-header * {
-	/* cursor: pointer; */
 	text-decoration: none;
 	display: block;
 	font-size: 1.2em;
@@ -131,7 +130,8 @@
 
 .portfolio-header *:hover {
 	color: rgb(70, 70, 141);
-	border-bottom: rgb(191, 192, 211) 1px solid;
+	padding: 0 0 2px;
+	border-bottom: rgb(219, 220, 226) 3px solid;
 }
 
 .cv {
