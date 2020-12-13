@@ -23,7 +23,7 @@ function Cv() {
 			<header className='cv-page-header'>
 				<img src={avatar} alt='-' />
 				<h1>Ori Roll</h1>
-				<p>Ex-architect applying for a front-end development position</p>
+				<p>Ex-architect applying for a frontend (+ beginner backend) development position</p>
 			</header>
 
 			<div className='cv-page-header-print'>
@@ -58,6 +58,17 @@ function Cv() {
 
 			<div className='cv-section-work'>
 				<h3 className='cv-section-header'>WORK EXPERIENCE</h3>
+				<div className='cv-episode'>
+					<div className='cv-episode-header'>
+						<h2>Developing my personal front end and back end skills</h2>
+						<h4>~2020</h4>
+					</div>
+					<h3>Self</h3>
+					<p>
+					During the corona outbreak I used my time to improve my frontend abilities and learn new Backend skills.<br/> 
+					I created new projects for my CV - a "Monday.com" style app with basic functionality for both the client and server side.
+					</p>
+				</div>
 				<div className='cv-episode'>
 					<div className='cv-episode-header'>
 						<h2>Milner architects</h2>
@@ -122,6 +133,7 @@ function Cv() {
 					</h2>
 					<p> HTML, CSS, JavaScript</p>
 					<p>REACT (with redux/contextAPI, react router)</p>
+					<p>Node.js - REST APIs with Express and MongoDB (using Mongoose) - Basic level</p>
 					<p>AutoCAD, SketchUp, Revit, 3ds-max, Vray, Photoshop, Illustrator</p>
 				</div>
 				<div className='cv-episode'>
