@@ -47,7 +47,7 @@ function Portfolio() {
 			img: pmgif,
 			link: "http://project-manager-fe.herokuapp.com/",
 			repo: "https://github.com/Ori-Roll/Projector",
-			style: { gridTemplateColumns: "6fr 3fr" },
+			style: { gridTemplateColumns: "7fr 3fr" },
 		},
 		{
 			key: "calcalenderder",
