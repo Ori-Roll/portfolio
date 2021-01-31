@@ -34,18 +34,18 @@ function LevelBar({ level, comment, skill }) {
 		ctx.fill();
 	}
 
-	useEffect(() => {
+/* 	useEffect(() => {
 		const canvas = canvasRef.current;
 		let ctx = canvasRef.current.getContext("2d");
 		drawLevel(ctx, level);
-		/* ctx.fill(); */
-	}, []);
+		
+	}, []); */
 
 	/* debugger; */
 
 	return (
 		<div className='skill-bar'>
-			<canvas ref={canvasRef} width={"125px"} height={"30px"} /*  className='level-bar' */ />
+			{/* <canvas ref={canvasRef} width={"125px"} height={"30px"} /> */}
 			<p>{skill}</p>
 			<p className='skill-bar-comment'>{comment}</p>
 		</div>

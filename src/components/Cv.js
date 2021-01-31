@@ -67,11 +67,10 @@ function Cv() {
 			<div className='cv-section-about'>
 				<h3 className='cv-section-header'>ABOUT ME</h3>
 				<p>
-					Hey, I'm Ori, an ex building architect (b.arch from the Technion), who has written a lot
-					of code as in the past. Recently, I've decided to up my game, improve my skills, and start
-					looking for a job as a full time web developer. I've created websites, games, a project managment app (like Monday.com) a calendar
-					app (like google calendar) and more. I like simple and efficient solutions for programming
-					problems and always try having reusable and concise code.
+					Hey, I'm Ori, a Junior web developer (also, formerly a building architect - b.arch from the Technion). 
+					I was writing code most of my life and am very passionet about it. I like simple and efficient solutions for programming
+					problems and always try having reusable and concise code. I've created websites, games, a simple project managment app (like Monday.com) a calendar
+					app for my portfolio (like google calendar) and more.
 				</p>
 			</div>
 
@@ -79,12 +78,13 @@ function Cv() {
 				<h3 className='cv-section-header'>WORK EXPERIENCE</h3>
 				<div className='cv-episode'>
 					<div className='cv-episode-header'>
-						<h2>Developing my personal front end and back end skills</h2>
+						<h2>Working on a lean project management web app startup</h2>
 						<h4>~2020</h4>
 					</div>
 					<p>
-					During the corona outbreak I used my time to improve my frontend abilities and learn new Backend skills.<br/> 
-					I created new projects for my CV - a "Monday.com" style app with basic functionality for both the client and server side.
+					During the corona outbreak, I worked on a web app startup - a proof of concept for a project managment app (similar to monday.com or clickUp).  
+					I designed all of the client side structure (with React) and a most server side oparations (based on mongoDB and using node + express).
+					I was working along with experienced developers.
 					</p>
 				</div>
 				<div className='cv-episode'>
@@ -145,27 +145,22 @@ function Cv() {
 						<u>Technical skills</u>
 					</h2> */}
 					<div className='cv-skill-prog'>
-						<LevelBar level={3} skill={"HTML"} />
-						<LevelBar level={3.5} skill={"CSS"} />
-						<LevelBar level={4} skill={"JavaScript"} />
+						<LevelBar level={3} skill={"HTML, CSS"} />
+						<LevelBar level={4} skill={"JavaScript"} comment={"Very good understanding of concepts like functional programming, state, closures, scope, asynchronous, etc."} />
 						<LevelBar
 							level={4}
 							skill={"React.js"}
-							comment={"(with redux/contextAPI, react router)"}
+							comment={"(with redux/contextAPI, react router). Proficient with function components, structure and render efficiancy."}
 						/>
 						<LevelBar
 							level={1.5}
-							skill={"Node.js + express"}
-						/>
-						<LevelBar
-							level={1.5}
-							skill={"MongoDB"}
-							comment={"(with mongoose)"}
+							skill={"Node.js + express + mongoDB+mongoose"}
+							comment={"My server-side knowledge is relatively basic"}
 						/>
 					</div>
 					<div className='cv-skill-others'>
 						<h2>Other Skills</h2>
-						<p>VS Code, AutoCAD, SketchUp, Revit, 3ds-max, Vray, Photoshop, Illustrator</p>
+						<p>VS Code, NPM, Git. <br/> AutoCAD, Revit, 3ds-max, Photoshop</p>
 					</div>
 					<div className='cv-skill-languages'>
 						<h2>Languages</h2>

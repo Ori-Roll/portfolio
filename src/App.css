@@ -279,9 +279,10 @@
 
 .cv-episode-skills-body {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 3fr 1fr;
   grid-template-rows: 0.5fr 0.4fr;
-  gap: 5px;
+  column-gap: 30px;
+  row-gap: 10px;
   grid-template-areas:
     'cv-skill-prog cv-skill-others'
     'cv-skill-prog cv-skill-languages';
@@ -293,7 +294,7 @@
   display: grid;
   gap: 0.6em;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 .cv-skill-others {
   font-size: medium;

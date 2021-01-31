@@ -21,10 +21,12 @@ function Portfolio() {
 			discription: (
 				<span>
 					<h3>
+					This is a proof of concept app for a startup.
 					A frontend + backend project, with basic Monday.com-like functionality.  <br/>
+					I have built most of the app and worked with other experianced developers to present a good solution. <br/>
 					Tasks are dynamic and every tasks group can have different columns. Projects, groups, columns and tasks are dynamic and customisable. Backend DB structure supports all FE needs. 
 					</h3>
-					<h3> ! ! ! NOTE: A few functions are not yet working properly on the deployed version ! </h3>
+					<h3> ! ! ! NOTE:<br/> A few functions are not yet working properly on the deployed version ! </h3>
 					<u>Key practices used:</u>
 					<br /><br />
 					<h4>Server side:</h4>
