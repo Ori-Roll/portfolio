@@ -1,27 +1,22 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
-function Header() {
-	/* const [currentPage, setCurrentPage] = useState("portfolio");
-	const pageOptions = {
-		none: { color: "blue" },
-		portfolio: { color: "blue" },
-		CV: { color: "blue" },
-		contact: { color: "blue" },
-	}; */
-	return (
-		<div className='header'>
-			<NavLink to='/portfolio' activeStyle={{ color: "#0a6ecc" }}>
-				Portfolio
-			</NavLink>
-			<NavLink to='/cv' activeStyle={{ color: "#0a6ecc" }}>
-				My CV
-			</NavLink>
-			<NavLink to='/contact' activeStyle={{ color: "#0a6ecc" }}>
-				Contact me
-			</NavLink>
-		</div>
-	);
-}
+const navLinkStyle = { activeStyle: { color: '#0a6ecc' } };
+
+const Header = () => {
+  return (
+    <div className="header">
+      <NavLink to="/portfolio" {...navLinkStyle}>
+        Portfolio
+      </NavLink>
+      <NavLink to="/cv" {...navLinkStyle}>
+        My CV
+      </NavLink>
+      <NavLink to="/contact" {...navLinkStyle}>
+        Contact me
+      </NavLink>
+    </div>
+  );
+};
 
 export default Header;
