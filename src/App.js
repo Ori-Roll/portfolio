@@ -1,18 +1,18 @@
-import "./App.css";
-import React from "react";
-import { HashRouter as Router } from "react-router-dom";
-import Header from "./components/Header.js";
-import Main from "./components/Main.js";
+import './App.css';
+import React from 'react';
+import { HashRouter as Router } from 'react-router-dom';
+import Header from './components/Header.js';
+import Main from './components/Main.js';
 
-function App() {
-	return (
-		<Router>
-			<div className='App'>
-				<Header />
-				<Main />
-			</div>
-		</Router>
-	);
-}
+const App = () => {
+  return (
+    <Router>
+      <div className="App">
+        <Header />
+        <Main />
+      </div>
+    </Router>
+  );
+};
 
 export default App;
