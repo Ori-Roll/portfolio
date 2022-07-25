@@ -1,15 +1,16 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect } from "react";
 
 const LevelBar = ({ level, comment, skill }) => {
   const canvasRef = useRef(null);
-  const colorForCircles = '#486985';
+  const colorForCircles = "#486985";
   function drawLevel(ctx, level) {
     let LevelDec = level % 1 ? level % 1 : 0;
     let levelInt = Math.floor(level);
 
     for (let i = 5; i > 0; i--) {
       const xDistance = (i - 0.5) * 25 - 2;
-      let circlePart = i <= levelInt ? 2 * Math.PI : 2 * Math.PI * LevelDec;
+      let circlePart =
+        i <= levelInt ? 2 * Math.PI : 2 * Math.PI * LevelDec;
       if (LevelDec && i > levelInt + 1) {
         circlePart = 0;
       }
@@ -19,18 +20,24 @@ const LevelBar = ({ level, comment, skill }) => {
 
   function levelCircle(ctx, xDistance, circlePart) {
     ctx.imageSmoothingEnabled = true;
-    ctx.imageSmoothingQuality = 'high';
+    ctx.imageSmoothingQuality = "high";
     ctx.beginPath();
     ctx.strokeStyle = colorForCircles;
     ctx.arc(xDistance, 16, 10, 0, 2 * Math.PI);
     ctx.stroke();
     ctx.beginPath();
-    ctx.strokeStyle = 'white';
+    ctx.strokeStyle = "white";
     ctx.arc(xDistance, 16, 9, 0, 2 * Math.PI);
     ctx.stroke();
     ctx.beginPath();
     ctx.fillStyle = colorForCircles;
-    ctx.arc(xDistance, 16, 8, 0.5 * Math.PI, circlePart + 0.5 * Math.PI);
+    ctx.arc(
+      xDistance,
+      16,
+      8,
+      0.5 * Math.PI,
+      circlePart + 0.5 * Math.PI
+    );
     ctx.fill();
   }
 
@@ -46,7 +53,7 @@ const LevelBar = ({ level, comment, skill }) => {
   return (
     <div className="skill-bar">
       {/* <canvas ref={canvasRef} width={"125px"} height={"30px"} /> */}
-      <p>{skill}</p>
+      <h5>{skill}</h5>
       <p className="skill-bar-comment">{comment}</p>
     </div>
   );
