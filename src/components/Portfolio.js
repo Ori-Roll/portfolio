@@ -3,11 +3,11 @@ import { NavLink, Route, Switch, Redirect } from "react-router-dom";
 import Project from "./Project.js";
 /* import * as projectsData from "./projects.json"; */
 
-import calcalImg from "../images/calcal.gif";
-import mapsImg from "../images/maps.gif";
-import calculatorImg from "../images/calc.png";
-import listerImg from "../images/Lister.png";
-import pmgif from "../images/p-m-gif.gif";
+import calcalImg from "../assets/calcal.gif";
+import mapsImg from "../assets/maps.gif";
+import calculatorImg from "../assets/calc.png";
+import listerImg from "../assets/Lister.png";
+import pmgif from "../assets/p-m-gif.gif";
 
 const Portfolio = () => {
   /* console.log("data is :" + projectsData); */
@@ -20,7 +20,8 @@ const Portfolio = () => {
       name: "Project-Manager - basic Monday.com style app",
       discription: (
         <span>
-          <h3>
+          <h2>Old project - 2020</h2>
+          <p>
             This is a proof of concept app for a startup. A frontend +
             backend project, with basic Monday.com-like functionality.{" "}
             <br />
@@ -30,7 +31,7 @@ const Portfolio = () => {
             columns. Projects, groups, columns and tasks are dynamic
             and customisable. Backend DB structure supports all FE
             needs.
-          </h3>
+          </p>
           <u>Key practices used:</u>
           <br />
           <br />
@@ -73,6 +74,7 @@ const Portfolio = () => {
       name: "Calcalenderder",
       discription: (
         <span>
+          <h2>Old project - 2019</h2>
           A react app that uses reacts context api for cross component
           access to user tasks.
           <br />
@@ -102,6 +104,7 @@ const Portfolio = () => {
       name: "Star Wars API Lister",
       discription: (
         <span>
+          <h2>Old project - 2019</h2>
           Star-Wars catalogue using SWAPI.
           <br />
           A pet project practicing redux axios and more <br />
@@ -132,6 +135,7 @@ const Portfolio = () => {
       name: "Map Creator",
       discription: (
         <span>
+          <h2>Old project - 2019</h2>
           Work in progress.
           <br />
           <br />
