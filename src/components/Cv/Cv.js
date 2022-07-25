@@ -1,12 +1,12 @@
-import React from 'react';
-import LevelBar from './LevelBar.js';
-import avatar from '../../images/avatar.png';
-import printIcon from '../../images/print-icon.png';
-import pdfIcon from '../../images/pdf17.svg';
-import pdfCv from '../../images/Ori-Cv.pdf';
-import { cvData } from '../../data/cvData';
-import Contact from './Contact.js';
-import Episode from './Episode.js';
+import React from "react";
+import LevelBar from "./LevelBar.js";
+import avatar from "../../assets/avatar.png";
+import printIcon from "../../assets/print-icon.png";
+import pdfIcon from "../../assets/pdf17.svg";
+import pdfCv from "../../assets/Ori-Cv.pdf";
+import { cvData } from "../../data/cvData";
+import Contact from "./Contact.js";
+import Episode from "./Episode.js";
 
 const Cv = () => {
   function goPDF() {
@@ -24,34 +24,29 @@ const Cv = () => {
       <header className="cv-page-header">
         <img src={avatar} alt="-" />
         <h1>Ori Roll</h1>
-        <p className="cv-header-sub">
-          Front end (+ novice backend) developer with a background in
-          architecture
-        </p>
+        <p className="cv-header-sub">Front end developer</p>
       </header>
 
       <div className="cv-page-header-print">
         <img
           src={printIcon}
           alt="-"
-          style={{ height: '2.3em' }}
+          style={{ height: "2.3em" }}
           onClick={() => goPrint()}
         />
         <img
           src={pdfIcon}
           alt="-"
-          style={{ height: '2.3em' }}
+          style={{ height: "2.3em" }}
           onClick={() => goPDF()}
         />
       </div>
 
       <div className="cv-section-contact">
         <h3 className="cv-section-header">CONTACT ME</h3>
-        <div className="cv-section-contact-deatils">
-          {contact.map(({ id, ...rest }) => {
-            return <Contact {...rest} />;
-          })}
-        </div>
+        {contact.map(({ id, ...rest }) => {
+          return <Contact {...rest} />;
+        })}
       </div>
 
       <div className="cv-section-about">
@@ -64,8 +59,10 @@ const Cv = () => {
         {work.map(({ id, commentHeader, ...rest }) =>
           commentHeader ? (
             <>
-              <br />
-              <h2 key={id}>{commentHeader}</h2>
+              <p />
+              <h3 className="cv-section-header" key={id}>
+                {commentHeader}
+              </h3>
             </>
           ) : (
             <Episode key={id} {...rest} />
@@ -73,19 +70,23 @@ const Cv = () => {
         )}
       </div>
 
-      <div className="cv-section-education">
+      {/* <div className="cv-section-education">
         <h3 className="cv-section-header">EDUCATION & BACKGROUND</h3>
         <div className="cv-episode">
           <h2>Academic qualifications</h2>
-          <h4>2013</h4>
-          <p>Bachelor's degree in architecture from Technion (B.Arc)</p>
+          <p>
+            2013 - Bachelor's degree in architecture from Technion
+            (B.Arc)
+          </p>
         </div>
         <div className="cv-episode">
           <h2>IDF</h2>
           <h4>2000&#8202;-&#8202;2003</h4>
-          <p>Medic in the Combat engineering corps (“Handasa kravit”)</p>
+          <p>
+            Medic in the Combat engineering corps (“Handasa kravit”)
+          </p>
         </div>
-      </div>
+      </div> */}
       <div className="cv-section-skills">
         <h3 className="cv-section-header">SKILLS</h3>
         <div className="cv-episode-skills-body">
@@ -94,17 +95,18 @@ const Cv = () => {
               <LevelBar key={id} {...rest} />
             ))}
           </div>
-          <div className="cv-skill-others">
-            <h2>Other Skills</h2>
-            <p>
-              VSCode, npm, git. <br /> AutoCAD, Revit, 3ds-max, Photoshop
-            </p>
-          </div>
-          <div className="cv-skill-languages">
-            <h2>Languages</h2>
-            <p>Hebrew - native speaker</p>
-            <p>English - native speaker level</p>
-          </div>
+          {/* <div className="cv-skill-others"> */}
+          {/* <h2>Other Skills</h2> */}
+          {/* <p> */}
+          {/* VSCode, npm, git. <br /> AutoCAD, Revit, 3ds-max, */}
+          {/* Photoshop */}
+          {/* </p> */}
+          {/* </div> */}
+          {/* <div className="cv-skill-languages"> */}
+          {/* <h2>Languages</h2> */}
+          {/* <p>Hebrew - native speaker</p> */}
+          {/* <p>English - native speaker level</p> */}
+          {/* </div> */}
         </div>
       </div>
     </div>
