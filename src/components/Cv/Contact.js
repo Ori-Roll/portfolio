@@ -3,11 +3,6 @@ import { iconNames, iconsMap } from "./../../utils/mapIconToName";
 
 const Contact = (props) => {
   const { title, linkData, linkRef, textData, iconName } = props;
-  console.log("props are ", props);
-
-  console.log(iconNames);
-  console.log(iconName);
-  console.log(iconsMap);
 
   const ContactIcon = iconsMap.get(iconNames[iconName]);
 

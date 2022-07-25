@@ -7,7 +7,7 @@
 }
 
 :root {
-  --header-btn-shadow: rgba(0, 0, 0, 0.212) 0px 1px 1px
+  --header-btn-shadow: rgba(0, 0, 0, 0.212) 0px 1px 1px;
   --global-background-color: rgb(243, 241, 239);
 }
 
