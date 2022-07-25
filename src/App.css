@@ -1,11 +1,13 @@
+
+/* TODO: This is ugly, full of redundancy and useless grids.
+         Set a reminder to clean this when possible (separate to files if possible) */ 
+
 * {
   margin: 0;
 }
 
 :root {
   --header-btn-shadow: rgba(0, 0, 0, 0.212) 0px 1px 1px
-    /* , rgba(255, 255, 255, 0.692) -4px -4px 10px */;
-  /* inset rgba(255, 255, 255, 0.822) -2px -2px 15px, inset rgba(255, 255, 255, 0.815) 2px 2px 20px; */
   --global-background-color: rgb(243, 241, 239);
 }
 
@@ -18,7 +20,8 @@
 }
 
 .header {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
+
   font-weight: 500;
   display: flex;
   flex-direction: row;
@@ -58,7 +61,6 @@
   margin: 0.2em 1em 0.2em;
   font-size: 2em;
   text-decoration: none;
-  /* background-color: rgb(189, 189, 189); */
 }
 
 .intro-link:hover {
@@ -71,6 +73,9 @@
 
 .intro-head * {
   font-family: 'Nunito', sans-serif;
+  /* font-family: 'Zilla Slab', serif; */
+  font-family: 'Roboto', sans-serif;
+
   font-size: 2.5em;
   font-weight: 200;
   color: grey;
@@ -136,6 +141,8 @@
 
 .cv {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Zilla Slab', serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 100;
   text-align: left;
   background-color: white;
@@ -147,7 +154,6 @@
     'cv-page-header-print'
     'cv-section-about'
     'cv-section-skills'
-    'cv-section-education'
     'cv-section-work'
     'cv-section-contact';
   row-gap: 1em;
@@ -156,6 +162,8 @@
 
 .cv * {
   padding: 0.2em 0;
+  white-space: pre-wrap;
+
 }
 
 .cv h2 {
@@ -176,6 +184,15 @@
   color: #314f63;
 }
 
+.cv small {
+  padding: 0 1em;
+}
+
+.cv-small-icon-wrapper{
+  width:16px;
+  height:16px;
+}
+
 .cv-page-header {
   grid-area: cv-page-header;
   text-align: center;
@@ -194,7 +211,7 @@
 
 .cv-page-header p {
   font-weight: 500;
-  font-size: 1.6em;
+  font-size: 1.4em;
   /* color: rgb(68, 112, 153); */
   color: #486985;
 }
@@ -211,11 +228,11 @@
   font-size: large;
   text-align: justify;
   grid-area: cv-section-about;
+  line-height: 1.4em;
 }
 
 .cv-section-about h3 {
   grid-area: cv-section-about;
-  font-size: large;
   margin: 0 0 10px 0;
 }
 
@@ -242,10 +259,12 @@
   color: rgb(0, 140, 255);
 }
 .cv-section-contact-deatils {
-  display: grid;
-  grid-template-rows: repeat(3, [col] auto);
-  grid-template-columns: repeat(2, [col] auto);
-  gap: 5px;
+  /* display: grid; */
+  /* grid-template-rows: repeat(3, [col] auto); */
+  /* grid-template-columns: repeat(2, [col] auto); */
+  /* gap: 5px; */
+  display: flex;
+  gap: 10px;
   font-weight: 400;
 }
 
@@ -255,9 +274,6 @@
   margin: 0;
 }
 
-.cv-section-contact a {
-  margin: 0 0 10px 0;
-}
 
 .cv-section-contact h3 {
   margin: 0 0 13px 0;
@@ -274,28 +290,35 @@
 .cv-section-skills {
   grid-area: cv-section-skills;
   display: grid;
-  grid-template-rows: 0.1fr 3fr;
+  grid-template-rows: 0.1fr 2fr;
+  padding: 5px 0 0;
+}
+
+.cv-section-skills * {
+  white-space: pre-line
 }
 
 .cv-episode-skills-body {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: 0.5fr 0.4fr;
-  column-gap: 30px;
-  row-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(1, 1);
+  column-gap: 20px;
+  row-gap: 20px;
   grid-template-areas:
-    'cv-skill-prog cv-skill-others'
-    'cv-skill-prog cv-skill-languages';
-  margin: 0 1em 1em 0;
+    'cv-skill-prog cv-skill-prog'
+    'cv-skill-languages cv-skill-others';
+  /* margin: 0 0.5em 0.5em 0; */
 }
 .cv-skill-prog {
   grid-area: cv-skill-prog;
-  padding: 10px 0 0;
   display: grid;
-  gap: 0.6em;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  column-gap: 0.2em;
+  row-gap: 0.5em;
+  grid-template-rows: auto;
+  grid-template-columns: 1fr 1fr 1fr;
 }
+
+
 .cv-skill-others {
   font-size: medium;
   padding: 8px 0 0 0;
@@ -316,29 +339,67 @@
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-rows: 0.2fr 0.2fr 0.2fr;
+  grid-template-rows: 0.2fr 0.2fr;
+}
+
+
+.skill-bar:nth-child(2){
+  grid-column: 2 / 4;
 }
 
 .skill-bar-comment {
-  font-size: large;
+  font-size: 0.75em;
   padding: 0;
   font-weight: 200;
 }
 
 .cv-section-header {
   /* font-family: "Montserrat", sans-serif; */
-  font-family: 'Raleway', sans-serif;
-  font-weight: 400;
+  /* font-family: 'Raleway', sans-serif; */
   padding: 5px 0 5px 0;
   border: 1px solid rgb(211, 211, 211);
   border-left: none;
   border-right: none;
   border-top: none;
+  color: #0d3e5f;
+}
+
+.cv-episode {
+  line-height: 1.5em;
 }
 
 .cv-episode-header * {
   display: inline-block;
-  padding: 10px 15px 0 0;
+  padding: 4px 0 0 0;
+
+}
+
+.cv-episode-header h4 {
+  padding: 0;
+  font-weight: 600;
+  color: #0d3e5f;
+
+}
+
+.cv-episode-header h2 {
+  font-weight: 600;
+  color: #0d3e5f;
+
+}
+
+.cv-indented-ul{
+  /* font-family: 'Ibarra Real Nova', serif; */
+  padding: 0;
+}
+.cv-indented-li {
+  /* padding-left: 1em; */
+  list-style-type: none;
+  /* padding-inline-start: 1em;  */
+}
+
+.cv-indented-li::before {
+  content: ">>";
+  padding-right: 8px;
 }
 
 @media (min-width: 1200px) {
@@ -379,17 +440,18 @@
   }
 
   .cv {
-    padding: 3.2em 4em;
+    padding: 2em 3em;
     margin: 1.4em 6vw 3em 2.5em;
-    column-gap: 2em;
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 0.3fr 0.35fr 0.8fr 0.5fr 1fr;
+    column-gap: 1em;
+    row-gap: 0.7em;
+    grid-template-columns: 3fr 1.6fr;
+    grid-template-rows: 0.09fr 0.08fr 0.35fr 0.7fr 0.2fr;
     grid-template-areas:
-      'cv-page-header   		cv-page-header-print'
-      'cv-section-about 		cv-section-about '
-      'cv-section-skills 		cv-section-education'
-      'cv-section-work 		cv-section-contact'
-      'cv-section-work		.';
+      'cv-page-header   	cv-page-header-print'
+      'cv-section-about 	cv-section-about '
+      'cv-section-work 		cv-section-skills'
+      'cv-section-work    cv-section-contact'
+      'cv-section-education 		.';
   }
 
   .cv-page-header {
@@ -402,6 +464,10 @@
       'cv-header-pic cv-header-sub';
   }
 
+  .cv-header-sub {
+    padding: 0;
+  }
+
   .cv-page-header img {
     padding: 0.3em 0 0 0em;
     margin: 0;
@@ -411,11 +477,12 @@
     font-size: larger;
   }
   .cv-section-about * {
-    margin-bottom: 1em;
+    margin-bottom: 0.1em;
   }
   .skill-bar {
-    padding-right: 15px;
+    /* padding-right: 15px; */
   }
+
 
   .cv-page-header-print {
     grid-area: cv-page-header-print;
@@ -487,35 +554,36 @@
   }
 
   .cv {
-    /* padding: 3.2mm 2mm; */
-    /* margin: 1.4em 2em 3em 2.5em; */
     margin: 0;
     padding: 2mm 10mm 0 0;
     gap: 0;
-    column-gap: 5mm;
-    grid-template-columns: 10fr 5fr;
-    grid-template-rows: 0.2fr 0.4fr 0.6fr 0.8fr 1fr;
+    column-gap: 4mm;
+
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-rows: 95px 0.2fr 0.2fr 2fr;
     grid-template-areas:
-      'cv-page-header cv-page-header'
-      'cv-section-about cv-section-about'
-      'cv-section-skills cv-section-skills'
-      'cv-section-work cv-section-education'
-      'cv-section-work cv-section-contact';
+      'cv-page-header     .                   cv-section-contact'
+      'cv-section-about   cv-section-about    cv-section-about'
+      'cv-section-skills  cv-section-skills   cv-section-skills'
+      'cv-section-work    cv-section-work     cv-section-work';
   }
 
   .cv-episode-header * {
-    padding: 2mm 0 0;
-    margin: 0;
+      margin: 0;
+
+
   }
 
   .cv-page-header {
     text-align: left;
     display: grid;
-    grid-template-columns: 9fr 1fr;
-    grid-template-rows: 0.2fr 0.5fr;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 0.2fr 0.2fr 0.4fr;
+    column-gap: 5mm;
     grid-template-areas:
-      'cv-header-name cv-header-pic'
-      'cv-header-sub cv-header-pic';
+      'cv-header-pic cv-header-name'
+      'cv-header-pic cv-header-sub'
+      'cv-header-pic .';
   }
 
   .cv-page-header img {
@@ -526,7 +594,9 @@
 
   .cv-page-header p {
     padding: 2mm 0 2mm;
-    font-size: 5.1mm;
+    font-size: 4.2mm;
+    line-height: 5.6mm;  
+
   }
   .cv-page-header * {
     padding: 0;
@@ -541,38 +611,82 @@
     float: right;
   }
   .cv-skill-prog {
-    padding: 0px 0 5mm;
+    grid-area: cv-skill-prog;
+    /* padding: 0px 0 5mm; */
     display: grid;
-    gap: 0;
-    grid-template-rows: 0.5fr 0.5fr;
-    grid-template-columns: 1fr 1.6fr;
+    column-gap: 2mm;
+    row-gap: 2mm;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   .cv-skill-languages {
     padding: 0;
     font-weight: 200;
   }
-  .cv-episode-skills-body {
-    gap: 5px;
+
+  .cv-skill-others {
+    font-size: 0.7em;
   }
+
+  .cv-episode-skills-body {
+    gap: 0px;
+    padding: 8px 0 5px;
+  }
+
+  
+.skill-bar-comment {
+  font-size: 5em;
+}
+
+  .cv-episode {
+    /* font-family: 'Ibarra Real Nova', serif; */
+    font-size: 4.2mm;
+    line-height: 5.6mm;  
+      padding: 3mm 0 0;
+
+  }
+  .cv-episode * {
+    /* text-align: justify;  */
+    /* hyphens: auto; */
+  }
+
+
   .skill-bar {
-    padding: 4mm 0 0;
+    padding: 1mm 0 0;
   }
 
   .skill-bar * {
-    font-size: medium;
+    font-size: 0.7em;
     padding: 0;
   }
+
   .skill-bar canvas {
     width: 30mm;
   }
 
-  .cv-section-contact * {
-    padding: 0;
+  .cv-section-contact{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .cv-section-contact a {
+    font-size: 3.8mm;
     margin: 0;
+    padding: 1px;
   }
-  .cv-section-about h3 {
-    font-size: large;
+
+  .cv-section-contact * {
+    margin: 0;
+    font-size: 3.8mm;
+    padding: 1px;
   }
+  
+
+.cv-section-contact .cv-section-header {
+  display: none;
+}
+
   .cv-section-about * {
     font-size: 4.2mm;
   }
