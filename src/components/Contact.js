@@ -7,7 +7,7 @@ function Contact() {
 			<div className='contact-section-contact-deatils'>
 				<div>
 					<h4>Phone:</h4>
-					<p className='contact-phone' /* style={{ fontSize: "1em" }} */>054-&#8202;4897787</p>
+					<p className='contact-phone' /* style={{ fontSize: "1em" }} */>+972 054-&#8202;4897787</p>
 				</div>
 
 				<div>
